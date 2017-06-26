@@ -1,0 +1,33 @@
+<div class="container page">
+
+<h2 class="page-title">News</h2>
+
+<div class="row">
+<%= for post <- @posts do %>
+
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title"><a href="/posts/<%= post.id %>"><%= post.title %></a></h3>
+        <div>
+          <p class="card-date"><%= post.date %></p>
+          <p class="card-tags">
+            <%= for tag <- post.tags do %>
+              <span class="label label-default"><%= tag.name %> </span>
+            <% end %>
+          </p>
+        </div>
+
+        <p class="card-text"><%= post.teaser %></p>
+        <a href="/posts/<%= post.id %>" class="btn btn-primary btn-sm orange">Read More</a>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+</div>
+
+<span><%= link "New Post", to: post_path(@conn, :new) %></span>
+
+</div>

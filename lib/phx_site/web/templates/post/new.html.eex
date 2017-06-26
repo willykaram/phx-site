@@ -1,0 +1,45 @@
+<div class="container page">
+<%= form_for @changeset, post_path(@conn, :create), fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :title, class: "control-label" %>
+    <%= text_input f, :title, class: "form-control" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="mdc-form-field">
+    <%= label f, :date, class: "control-label mdc-textfield__label" %>
+    <%= date_select f, :date, default: {DateTime.utc_now |> Map.fetch!(:year), DateTime.utc_now |> Map.fetch!(:month), DateTime.utc_now |> Map.fetch!(:day)}, class: "form-control" %>
+    <%= error_tag f, :date %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :teaser, class: "control-label" %>
+    <%= textarea f, :teaser, class: "form-control" %>
+    <%= error_tag f, :teaser %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :body, class: "control-label" %>
+    <%= textarea f, :body, class: "form-control" %>
+    <%= error_tag f, :body %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :old_url, class: "control-label" %>
+    <%= text_input f, :old_url, class: "form-control" %>
+    <%= error_tag f, :old_url %>
+  </div>
+
+  <%= multiple_select(f, :tags, @tags_all |> Enum.map(&{&1.name, &1.id}), value: nil) %>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Phoenix Framework</title>
+    <!-- <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>"> -->
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/font-awesome.min.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/bootstrap/bootstrap.min.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/phoenix.css") %>">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+
+  <body data-gr-c-s-loaded="true">
+
+      <header class="header">
+
+        <div class="icons">
+          <div class="icon"><a class="" href="https://twitter.com/elixirphoenix" target="_blank"><i class="fa fa-twitter fa-4" aria-hidden="true"></i></a></div>
+          <div class="icon"><a class="" href="https://github.com/phoenixframework/phoenix" target="_blank"><i class="fa fa-github fa-3" aria-hidden="true"></i></a></div>
+        </div>
+
+        <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse mb-4">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img alt="Phoenix" src="<%= static_path(@conn, "/images/logo-phx-white.png") %>"></a>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/posts">News</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/community">Community</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://hexdocs.pm/phoenix/Phoenix.html" target="_blank">Guides</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://hexdocs.pm/phoenix/Phoenix.html" target="_blank">Docs</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </header>
+
+<!--
+        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+  -->
+
+        <%= render @view_module, @view_template, assigns %>
+    <footer>
+      <div class="dockyard-logo"><a href="https://dockyard.com/phoenix-consulting" class="dockyard"><img alt="Dockyard" class="dockyard" src="<%= static_path(@conn, "/images/logos/logo-dy.png") %>"></a></div>
+      <div class="dockyard-text"><p>DockYard offers expert <a href="https://dockyard.com/phoenix-consulting" target="_blank">Phoenix consulting</a> for your projects</p></div>
+    </footer>
+
+
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
+    <!-- js for bootstrap -->
+
+    <script src="<%= static_path(@conn, "/js/bootstrap/jquery-3.1.1.slim.min.js") %>"></script>
+    <script>window.jQuery || document.write('<%= static_path(@conn, "/js/bootstrap/jquery.min.js") %>')</script>
+
+    <script src="<%= static_path(@conn, "/js/bootstrap/bootstrap.min.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/bootstrap/ie10-viewport-bug-workaround.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

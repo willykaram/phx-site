@@ -1,0 +1,24 @@
+<div class="container page">
+
+  <div class="post">
+    <h2 class="page-title"><%= @post.title %></h2>
+
+    <div class="date">
+      <%= @post.date %>
+    </div>
+
+    <div class="tags">
+      <%= for tag <- @post.tags do %>
+        <span class="label label-default"><%= tag.name %></span>
+      <% end %>
+    </div>
+
+    <div class="body">
+      <%= raw(@post.body) %>
+    </div>
+
+    <span><%= link "Edit", to: post_path(@conn, :edit, @post) %></span>
+    <span><%= link "Back", to: post_path(@conn, :index) %></span>
+
+  </div>
+</div>

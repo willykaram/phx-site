@@ -1,0 +1,61 @@
+<main class="bs-docs-masthead">
+  <h2 class="masthead">Productive. Reliable. Fast.</h2>
+  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+  <div class="container">
+    <p class="btn-outline-inverse btn-lg tagline">Build APIs, HTML 5 apps & more<br /></p>
+  </div>
+  <p><a "https://hexdocs.pm/phoenix/Phoenix.html" class="btn btn-primary guides">See our guides</a></p>
+</main>
+
+<main role="main" class="col-lg-12">
+
+  <div class="container">
+
+    <div class="row row-padded homepage-grid intro p-t text-center col-lg-12">
+      <div class="col-lg-4">
+        <h5><strong>How is Phoenix Different</strong></h5>
+        <p>Phoenix brings back the simplicity and joy in writing modern web applications by mixing tried and true technologies with a fresh breeze of functional ideas.</p>
+        <a href="https://hexdocs.pm/phoenix/Phoenix.html" class="btn btn-primary btn-sm m-b">Get started with Phoenix</a>
+      </div>
+      <div class="col-lg-4">
+        <h5><strong>Building The New Web</strong></h5>
+        <p>Create rich, interactive experiences across browsers, native mobile apps, and embedded devices with our real-time streaming technology called Channels.</p>
+        <a href="https://hexdocs.pm/phoenix/Phoenix.html" class="btn btn-primary btn-sm m-b">Learn about channels</a>
+      </div>
+      <div class="col-lg-4">
+        <h5><strong>Battle-Proven Technology</strong></h5>
+        <p>Phoenix leverages the Erlang VM ability to handle millions of connections alongside Elixir's beautiful syntax and productive tooling for building fault-tolerant systems.</p>
+        <a href="https://github.com/phoenixframework/phoenix" class="btn btn-primary btn-sm m-b">More about Elixir & the Erlang VM</a>
+      </div>
+    </div>
+
+    <div class="row row-backbordered">
+      <div class="col-lg-12">
+        <div class="panel panel-default panel-floating panel-floating-inline">
+          <div class="panel-body">
+            <div class="panel-thumbnail">
+              <a class="" href="/"><img alt="Phoenix" src="<%= static_path(@conn, "/images/2017-elixirconf-logo-wide.png") %>"></a>
+            </div>
+            <div class="panel-content">
+
+              <p class="text-muted m-b-0">
+                <p><a href="https://elixirconf.com/" target="_blank">ElixirConf™ US</a> is being held in Bellevue, WA, September 5-8. The CFP is now open and <a href="https://elixirconf.com/#registration" target="_blank">discount registration</a> is available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage-grid companies col-lg-12 ">
+      <h3 class="bs-docs-featurette-title">Enterprise Companies Using Phoenix</h2>
+        <div class="col-lg-4"><a href="http://bleacherreport.com/"><img alt="Bleacher Report" src="<%= static_path(@conn, "/images/logos/logo-br.png") %>"></a></div>
+        <div class="col-lg-4"><a href="https://theoutline.com/"><img alt="The Outline" src="<%= static_path(@conn, "/images/logos/logo-ot.png") %>"></a></div>
+        <div class="col-lg-4"><a href="https://www.inverse.com/"><img alt="Inverse" src="<%= static_path(@conn, "/images/logos/logo-iv.png") %>"></a></div>
+        <div class="col-lg-4"><a href="https://www.brightcove.com/en/"><img alt="Brightcove" src="<%= static_path(@conn, "/images/logos/logo-bc.png") %>"></a></div>
+        <div class="col-lg-4"><a href="https://heroiclabs.com/"><img alt="Heroic Labs" src="<%= static_path(@conn, "/images/logos/logo-hl.png") %>"></a></div>
+        <div class="col-lg-4"><a href="http://www.cargosense.com/"><img alt="Cargo Sense" src="<%= static_path(@conn, "/images/logos/logo-cs.png") %>"></a></div>
+    </div>
+
+  </div> <!-- /container -->
+
+</main>
